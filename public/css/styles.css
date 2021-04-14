@@ -176,6 +176,10 @@ main {
         box-shadow: 3px 3px 10px  rgb(100, 100, 100);
     }
 
+    main section article:hover .desc{
+        color :#b1b1b1;
+    }
+
    .items {
         transition-duration: 0.5ms;
         font-size: 16px;
