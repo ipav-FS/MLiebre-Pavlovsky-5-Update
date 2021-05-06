@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head') %>
+
+    <body>
+
+        <%- include('partials/header') %>
+
+
+
+            <main>
+                <h3>Detalle de Producto</h3>
+                <section class="ultima-visita">
+                    <div class="articulo">
+                        <h1>
+                            <%= product.name %>
+                        </h1>
+                        <h2>$ <%= product.price %>
+                        </h2>
+                        <p>
+                            <%= product.descuento %>
+                        </p>
+                        <figure class="image">
+                            <img src="/images/<%= product.image %>" alt="" class="product_img">
+                        </figure>
+
+                        <a href="/products/<%= product.id %>/edit" class="button is-success">Editar</a>
+
+                        <form class="form is-inline" action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="button is-danger">Borrar</button>
+                        </form>
+
+                    </div>
+
+
+                </section>
+
+
+                <%- include('partials/footer') %>
+
+                    <section>
+                        <article>
+                            <h5 class="h5">Copyright © 1999-2021 MercadoLiebre S.R.L.</h5>
+                        </article>
+                    </section>
+    </body>
+
+</html>
